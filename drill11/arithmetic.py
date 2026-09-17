@@ -12,3 +12,28 @@ def eligibility_logic(score,attendance,completed_drill):
     
     else:
         return "Not eligible"
+
+
+def safe_calculator(a, operator, b):
+    if operator not in ["+", "-", "*", "/","%","**"]:
+        return "Invalid operator"
+    if operator in ["/", "%"] and b == 0:
+        return "Cannot divide by zero"
+
+    if operator == "+":
+        return a+b
+    
+    if operator == "-":
+        return a-b
+    
+    if operator == "/":
+        return a/b
+    
+    if operator == "*":
+        return a*b
+    
+    if operator == "%":
+        return a%b
+    
+    if operator == "**":
+        return a**b
