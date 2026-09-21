@@ -19,3 +19,11 @@ def str_len(value):
     for char in value:
         count += 1
     return count
+
+
+def reverse_string(value):
+    result = ""
+    for i in range(len(value) -1, -1, -1):
+        result += value[i]
+
+    return result
