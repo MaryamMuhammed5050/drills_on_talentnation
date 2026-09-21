@@ -27,3 +27,6 @@ def reverse_string(value):
         result += value[i]
 
     return result
+
+def censor_words(text, banned_word):
+    return text.replace(banned_word, "***")
