@@ -8,3 +8,14 @@ def first_and_last(value):
         "first" : value[0],
         "last" : value[-1]
     }
+
+def clean_username(value):
+    value = value.strip()
+    value = value.lower()
+    return value.replace(" ", "_")
+
+def str_len(value):
+    count = 0
+    for char in value:
+        count += 1
+    return count
