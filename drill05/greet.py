@@ -23,3 +23,17 @@ def get_item(items, index):
         return "Index out of range"
     else:
         return items[index]
+
+def grade_label(score):
+    # Bug to fix: branch order and boundary checks must be correct.
+    if score < 0 or score > 100:
+        return "Invalid score"
+    if score >= 90:
+        return "A"
+    if score >= 80:
+        return "B"
+    if score >= 70:
+        return "C"
+   
+    else:
+        return "F"
