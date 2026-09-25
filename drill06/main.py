@@ -43,7 +43,7 @@ def receipt_formatter(name, quantity, price):
     slug = slug.replace(" ", "-")
     return slug
 
-    
+
 
 def manual_palindrome(text):
     cleaned = text.lower()
@@ -56,6 +56,38 @@ def manual_palindrome(text):
         return True
     else:
         return False
+
+
+
+
+
+def exact_calculator(left, operator, right):
+
+    try:
+        num_left = float(left)
+        num_right = float(right)
+    except ValueError:
+        return "Invalid number"
+   
+    if (operator == "/" or operator == "%") and num_right == 0:
+        return "Cannot divide by zero"
+
+    if operator == "+":
+        result = num_left + num_right
+    elif operator == "-":
+        result = num_left - num_right
+    elif operator == "*":
+        result = num_left * num_right
+    elif operator == "/":
+        result = num_left / num_right
+    elif operator == "%":
+        result = num_left % num_right
+    elif operator == "**":
+        result = num_left ** num_right
+    else:
+        return "Invalid operator"
+    return round(result, 2)
+
 
      
     
