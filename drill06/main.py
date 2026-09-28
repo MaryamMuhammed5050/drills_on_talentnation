@@ -89,6 +89,59 @@ def exact_calculator(left, operator, right):
     return round(result, 2)
 
 
+def initials_badge(full_name):
+    words = full_name.strip().split()
+    initials = []
+    for word in words:
+        first_letter =word[0].upper()
+        initials.append(first_letter)
+    return ".".join(initials) + "."
+
+
+def error_hint(error_type):
+    hints = {
+        "NameError": "Check variable names and spelling.",
+        "TypeError": "Check the types before using an operator.",
+        "ValueError": "Check whether the value can be converted.",
+        "ZeroDivisionError": "Check that the denominator is not zero.",
+        "IndexError": "Check the index is inside the valid range."
+    }
+    
+    
+    return hints.get(error_type, "Read the traceback carefully.")
+
+
+
+
+  def score_summary(name, a, b, c):
+    try:
+        score_a = float(a)
+        score_b = float(b)
+        score_c = float(c)
+    except (ValueError, TypeError):
+        return "Invalid score"
+        
+    for score in [score_a, score_b, score_c]:
+        # Indented this block so it is inside the loop
+        if score < 0 or score > 100:
+            return "Invalid score"
+            
+    avg = round((score_a + score_b + score_c) / 3, 2)
+    
+    if avg >= 90:
+        grade = "A"
+    elif avg >= 80:
+        grade = "B"
+    elif avg >= 70:
+        grade = "C"
+    else:
+        grade = "F"
+        
+    return f"Student: {name}\nAverage: {avg}\nGrade: {grade}"
+
+
+
+
      
     
 
