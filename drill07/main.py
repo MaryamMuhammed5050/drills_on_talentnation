@@ -34,11 +34,26 @@ def password_strength(password):
     if len(password) < 8:
         return "Weak"
     
-    # Check if the password contains at least one letter and at least one digit
-    has_letter = any(char.isalpha() for char in password)
-    has_digit = any(char.isdigit() for char in password)
+    # This Checks if the password contains at least one letter and at least one digit
+    letter = any(char.isalpha() for char in password)
+    digit = any(char.isdigit() for char in password)
     
-    if has_letter and has_digit:
+    if letter and digit:
         return "Strong"
     else:
         return "Medium"
+
+
+# Implement access_gate(age, has_id, is_banned).
+# Use guard-clause style. Return Too young if age is less than 18. Return No ID if has_id is false. 
+# Return Banned if is_banned is true. Return Allowed only if all checks pass.
+
+def access_gate(age, has_id, is_banned):
+    if age < 18:
+        return "Too young"
+    if has_id == False:
+        return "No ID"
+    if is_banned == True:
+        return "Banned"
+    else:
+        return "Allowed"
