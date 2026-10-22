@@ -9,3 +9,19 @@ def count_up(n):
     for n in range(1, n+1):
         num.append(n)
     return num 
+
+
+# Implement sum_multiples(limit, divisor). Return the sum of all positive numbers 
+# from 1 to limit inclusive that are divisible by divisor. 
+# If divisor is zero, return Invalid divisor. Do not use the built-in sum function.
+def sum_multiples(limit, divisor):
+    if divisor == 0:
+        return "Invalid divisor"
+    total = 0
+    for number in range(1, limit + 1):
+        if number % divisor == 0:
+        total = total + number
+    return total
+
+
+ 
