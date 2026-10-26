@@ -97,3 +97,13 @@ def count_odd():
 
 total = count_odd()
 print(total)
+
+def count_num():
+    big = [2,3,4,5,7,9,11,]
+    count = 0
+    for num in big:
+        if num > 5:
+            count += 1
+    return count
+result = count_num()
+print(result)
