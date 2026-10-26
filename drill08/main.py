@@ -86,3 +86,14 @@ def count_even():
 
 result = count_even()
 print(result)
+
+def count_odd():
+    number = [1,2,3,4,5,6,7,8,9,11]
+    count = 0
+    for numbers in number:
+        if numbers % 2:
+            count += 1
+    return count
+
+total = count_odd()
+print(total)
