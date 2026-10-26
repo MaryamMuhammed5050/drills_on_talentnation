@@ -73,3 +73,16 @@ def triangle_pattern(n):
 
     return "\n".join(pattern)
 
+
+
+
+def count_even():
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+    count = 0
+    for num in numbers:
+        if num % 2 == 0:
+            count += 1
+    return count
+
+result = count_even()
+print(result)
