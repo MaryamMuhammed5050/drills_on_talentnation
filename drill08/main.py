@@ -107,3 +107,48 @@ def count_num():
     return count
 result = count_num()
 print(result)
+
+class Product:
+    def __init__(self, name: str, price: float):
+        self.name = name
+        self.price = price
+
+class ShoppingCart:
+    def __init__(self):
+        # Initialize an empty list to store Product objects
+        self.items = []
+
+    def add_product(self, product: Product):
+        # TODO: Append the product object to the items list
+        pass
+
+    def remove_product(self, product_name: str):
+        # TODO: Find the product by name in the items list and remove it.
+        # Hint: You can use a loop or filter out matching items.
+        pass
+
+    def get_total(self) -> float:
+        # TODO: Calculate and return the sum of prices for all products in the cart
+        return 0.0
+
+# --- Test Your Code Here ---
+if __name__ == "__main__":
+    # 1. Create some products
+    apple = Product("Apple", 0.99)
+    milk = Product("Milk", 2.49)
+    bread = Product("Bread", 1.99)
+
+    # 2. Initialize the cart
+    cart = ShoppingCart()
+
+    # 3. Add items
+    cart.add_product(apple)
+    cart.add_product(milk)
+    cart.add_product(bread)
+
+    print(f"Total after adding: ${cart.get_total():.2f}")  # Should be $5.47
+
+    # 4. Remove an item
+    cart.remove_product("Milk")
+
+    print(f"Total after removing Milk: ${cart.get_total():.2f}")  # Should be $2.98
